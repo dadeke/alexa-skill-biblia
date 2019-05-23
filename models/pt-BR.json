@@ -1,0 +1,2749 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "a bíblia para mim",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "pare a leitura",
+                        "cancele",
+                        "cancelar",
+                        "sair da leitura",
+                        "sair"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "quero ajuda",
+                        "ajuda"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "pare com a leitura",
+                        "pare de ler",
+                        "pare"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": [
+                        "abra a biblia para mim",
+                        "abra a biblia",
+                        "abre a biblia para mim",
+                        "abre a biblia",
+                        "leia a biblia para mim",
+                        "leia a biblia"
+                    ]
+                },
+                {
+                    "name": "LeiaBibliaIntent",
+                    "slots": [
+                        {
+                            "name": "livro",
+                            "type": "livro"
+                        },
+                        {
+                            "name": "capitulo",
+                            "type": "capitulo"
+                        },
+                        {
+                            "name": "versiculo",
+                            "type": "versiculo"
+                        }
+                    ],
+                    "samples": [
+                        "por favor leia o livro de {livro} capítulo {capitulo} versículo {versiculo}",
+                        "por favor leia o livro de {livro} capítulo {capitulo}",
+                        "leia o livro de {livro} capítulo {capitulo} versículo {versiculo}",
+                        "leia o livro de {livro} capítulo {capitulo}",
+                        "{livro} capítulo {capitulo} versículo {versiculo}",
+                        "{livro} capítulo {capitulo}",
+                        "{livro} {capitulo} {versiculo} por favor",
+                        "{livro} {capitulo} por favor",
+                        "{livro} {capitulo} {versiculo}",
+                        "{livro} {capitulo}",
+                        "leia {livro} {capitulo} {versiculo} por favor",
+                        "por favor leia {livro} {capitulo} {versiculo}",
+                        "leia {livro} {capitulo} {versiculo}",
+                        "leia para mim {livro} {capitulo} {versiculo} por favor",
+                        "por favor leia para mim {livro} {capitulo} {versiculo}",
+                        "leia para mim {livro} {capitulo} {versiculo}",
+                        "leia {livro} capítulo {capitulo} versículo {versiculo} por favor",
+                        "por favor leia {livro} capítulo {capitulo} versículo {versiculo}",
+                        "leia {livro} capítulo {capitulo} versículo {versiculo}",
+                        "leia {livro} capítulo {capitulo} por favor",
+                        "por favor leia {livro} capítulo {capitulo}",
+                        "leia {livro} capítulo {capitulo}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "livro",
+                    "values": [
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "Gênesis",
+                                "synonyms": [
+                                    "Genesis"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "Êxodo",
+                                "synonyms": [
+                                    "Exodo"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "Levítico",
+                                "synonyms": [
+                                    "Levitico"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "Números",
+                                "synonyms": [
+                                    "Numeros"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "Deuteronômio",
+                                "synonyms": [
+                                    "Deuteronomio"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "Josué",
+                                "synonyms": [
+                                    "Livro de Josue",
+                                    "Livro de Josué"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "7",
+                            "name": {
+                                "value": "Juízes",
+                                "synonyms": [
+                                    "Juizes"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "8",
+                            "name": {
+                                "value": "Rute",
+                                "synonyms": [
+                                    "Livro de Rute"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "9",
+                            "name": {
+                                "value": "I Samuel",
+                                "synonyms": [
+                                    "Primeira Samuel"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "10",
+                            "name": {
+                                "value": "II Samuel",
+                                "synonyms": [
+                                    "Segunda Samuel"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "11",
+                            "name": {
+                                "value": "I Reis",
+                                "synonyms": [
+                                    "Primeira Reis"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "12",
+                            "name": {
+                                "value": "II Reis",
+                                "synonyms": [
+                                    "Segunda Reis"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "13",
+                            "name": {
+                                "value": "I Crônicas",
+                                "synonyms": [
+                                    "Primeira Cronicas"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "14",
+                            "name": {
+                                "value": "II Crônicas",
+                                "synonyms": [
+                                    "Segunda Cronicas"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "15",
+                            "name": {
+                                "value": "Esdras",
+                                "synonyms": [
+                                    "Livro de Esdras"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "16",
+                            "name": {
+                                "value": "Neemias",
+                                "synonyms": [
+                                    "Livro de Neemias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "17",
+                            "name": {
+                                "value": "Ester"
+                            }
+                        },
+                        {
+                            "id": "18",
+                            "name": {
+                                "value": "Jó",
+                                "synonyms": [
+                                    "Livro de Jo",
+                                    "Jo",
+                                    "Livro de Jó"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "19",
+                            "name": {
+                                "value": "Salmos",
+                                "synonyms": [
+                                    "Salmo"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "20",
+                            "name": {
+                                "value": "Provérbios",
+                                "synonyms": [
+                                    "Proverbios"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "21",
+                            "name": {
+                                "value": "Eclesiastes"
+                            }
+                        },
+                        {
+                            "id": "22",
+                            "name": {
+                                "value": "Cantares",
+                                "synonyms": [
+                                    "Cantares de Salomao",
+                                    "Canticos dos Canticos",
+                                    "Cantares de Salomão"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "23",
+                            "name": {
+                                "value": "Isaías",
+                                "synonyms": [
+                                    "Livro de Isaias",
+                                    "Isaias",
+                                    "Livro de Isaías"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "24",
+                            "name": {
+                                "value": "Jeremias",
+                                "synonyms": [
+                                    "Livro de Jeremias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "25",
+                            "name": {
+                                "value": "Lamentações",
+                                "synonyms": [
+                                    "Lamentações de Jeremias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "26",
+                            "name": {
+                                "value": "Ezequiel",
+                                "synonyms": [
+                                    "Livro de Ezequiel"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "27",
+                            "name": {
+                                "value": "Daniel",
+                                "synonyms": [
+                                    "Livro de Daniel"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "28",
+                            "name": {
+                                "value": "Oseias",
+                                "synonyms": [
+                                    "Livro de Oseias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "29",
+                            "name": {
+                                "value": "Joel",
+                                "synonyms": [
+                                    "Livro de Joel"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "30",
+                            "name": {
+                                "value": "Amós",
+                                "synonyms": [
+                                    "Livro de Amos",
+                                    "Amos",
+                                    "Livro de Amós"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "31",
+                            "name": {
+                                "value": "Obadias",
+                                "synonyms": [
+                                    "Livro de Obadias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "32",
+                            "name": {
+                                "value": "Jonas",
+                                "synonyms": [
+                                    "Livro de Jonas"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "33",
+                            "name": {
+                                "value": "Miqueias",
+                                "synonyms": [
+                                    "Livro de Miqueias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "34",
+                            "name": {
+                                "value": "Naum",
+                                "synonyms": [
+                                    "Livro de Naum"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "35",
+                            "name": {
+                                "value": "Habacuque",
+                                "synonyms": [
+                                    "Livro de Habacuque"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "36",
+                            "name": {
+                                "value": "Sofonias",
+                                "synonyms": [
+                                    "Livro de Sofonias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "37",
+                            "name": {
+                                "value": "Ageu",
+                                "synonyms": [
+                                    "Livro de Ageu"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "38",
+                            "name": {
+                                "value": "Zacarias",
+                                "synonyms": [
+                                    "Livro de Zacarias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "39",
+                            "name": {
+                                "value": "Malaquias",
+                                "synonyms": [
+                                    "Livro de Malaquias"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "40",
+                            "name": {
+                                "value": "Mateus"
+                            }
+                        },
+                        {
+                            "id": "41",
+                            "name": {
+                                "value": "Marcos"
+                            }
+                        },
+                        {
+                            "id": "42",
+                            "name": {
+                                "value": "Lucas"
+                            }
+                        },
+                        {
+                            "id": "43",
+                            "name": {
+                                "value": "João",
+                                "synonyms": [
+                                    "Joao"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "44",
+                            "name": {
+                                "value": "Atos dos Apóstolos",
+                                "synonyms": [
+                                    "Atos dos Apostolos",
+                                    "Atos"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "45",
+                            "name": {
+                                "value": "Romanos"
+                            }
+                        },
+                        {
+                            "id": "46",
+                            "name": {
+                                "value": "1 Coríntios",
+                                "synonyms": [
+                                    "Primeira carta aos Corintios",
+                                    "Primeira Corintios"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "47",
+                            "name": {
+                                "value": "2 Coríntios",
+                                "synonyms": [
+                                    "Segunda carta aos Corintios",
+                                    "Segunda Corintios"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "48",
+                            "name": {
+                                "value": "Gálatas",
+                                "synonyms": [
+                                    "Galatas"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "49",
+                            "name": {
+                                "value": "Efésios",
+                                "synonyms": [
+                                    "Efesios"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "50",
+                            "name": {
+                                "value": "Filipenses"
+                            }
+                        },
+                        {
+                            "id": "51",
+                            "name": {
+                                "value": "Colossenses"
+                            }
+                        },
+                        {
+                            "id": "52",
+                            "name": {
+                                "value": "1 Tessalonicenses",
+                                "synonyms": [
+                                    "Primeira carta aos Tessalonicenses",
+                                    "Primeira Tessalonicenses"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "53",
+                            "name": {
+                                "value": "2 Tessalonicenses",
+                                "synonyms": [
+                                    "Segunda carta aos Tessalonicenses",
+                                    "Segunda Tessalonicenses"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "54",
+                            "name": {
+                                "value": "1 Timóteo",
+                                "synonyms": [
+                                    "Primeira carta ao Timoteo",
+                                    "Primeira Timoteo"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "55",
+                            "name": {
+                                "value": "2 Timóteo",
+                                "synonyms": [
+                                    "Segunda Timoteo",
+                                    "Segunda carta ao Timoteo"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "56",
+                            "name": {
+                                "value": "Tito"
+                            }
+                        },
+                        {
+                            "id": "57",
+                            "name": {
+                                "value": "Filemom"
+                            }
+                        },
+                        {
+                            "id": "58",
+                            "name": {
+                                "value": "Hebreus"
+                            }
+                        },
+                        {
+                            "id": "59",
+                            "name": {
+                                "value": "Tiago"
+                            }
+                        },
+                        {
+                            "id": "60",
+                            "name": {
+                                "value": "1 Pedro",
+                                "synonyms": [
+                                    "Primeira carta de Pedro",
+                                    "Primeira Pedro"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "61",
+                            "name": {
+                                "value": "2 Pedro",
+                                "synonyms": [
+                                    "Segunda carta de Pedro",
+                                    "Segunda Pedro"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "62",
+                            "name": {
+                                "value": "1 João",
+                                "synonyms": [
+                                    "Primeira carta de Joao",
+                                    "Primeira Joao"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "63",
+                            "name": {
+                                "value": "2 João",
+                                "synonyms": [
+                                    "Segunda carta de Joao",
+                                    "Segunda Joao"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "64",
+                            "name": {
+                                "value": "3 João",
+                                "synonyms": [
+                                    "Terceira carta de Joao",
+                                    "Terceira Joao"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "65",
+                            "name": {
+                                "value": "Judas"
+                            }
+                        },
+                        {
+                            "id": "66",
+                            "name": {
+                                "value": "Apocalipse",
+                                "synonyms": [
+                                    "Apocalipse de João"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "capitulo",
+                    "values": [
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "um"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "dois"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "três"
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "quatro"
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "cinco"
+                            }
+                        },
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "seis"
+                            }
+                        },
+                        {
+                            "id": "7",
+                            "name": {
+                                "value": "sete"
+                            }
+                        },
+                        {
+                            "id": "8",
+                            "name": {
+                                "value": "oito"
+                            }
+                        },
+                        {
+                            "id": "9",
+                            "name": {
+                                "value": "nove"
+                            }
+                        },
+                        {
+                            "id": "10",
+                            "name": {
+                                "value": "dez"
+                            }
+                        },
+                        {
+                            "id": "11",
+                            "name": {
+                                "value": "onze"
+                            }
+                        },
+                        {
+                            "id": "12",
+                            "name": {
+                                "value": "doze"
+                            }
+                        },
+                        {
+                            "id": "13",
+                            "name": {
+                                "value": "treze"
+                            }
+                        },
+                        {
+                            "id": "14",
+                            "name": {
+                                "value": "catorze",
+                                "synonyms": [
+                                    "quatorze"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "15",
+                            "name": {
+                                "value": "quinze"
+                            }
+                        },
+                        {
+                            "id": "16",
+                            "name": {
+                                "value": "dezesseis"
+                            }
+                        },
+                        {
+                            "id": "17",
+                            "name": {
+                                "value": "dezessete"
+                            }
+                        },
+                        {
+                            "id": "18",
+                            "name": {
+                                "value": "dezoito"
+                            }
+                        },
+                        {
+                            "id": "19",
+                            "name": {
+                                "value": "dezenove"
+                            }
+                        },
+                        {
+                            "id": "20",
+                            "name": {
+                                "value": "vinte"
+                            }
+                        },
+                        {
+                            "id": "21",
+                            "name": {
+                                "value": "vinte e um"
+                            }
+                        },
+                        {
+                            "id": "22",
+                            "name": {
+                                "value": "vinte e dois"
+                            }
+                        },
+                        {
+                            "id": "23",
+                            "name": {
+                                "value": "vinte e três"
+                            }
+                        },
+                        {
+                            "id": "24",
+                            "name": {
+                                "value": "vinte e quatro"
+                            }
+                        },
+                        {
+                            "id": "25",
+                            "name": {
+                                "value": "vinte e cinco"
+                            }
+                        },
+                        {
+                            "id": "26",
+                            "name": {
+                                "value": "vinte e seis"
+                            }
+                        },
+                        {
+                            "id": "27",
+                            "name": {
+                                "value": "vinte e sete"
+                            }
+                        },
+                        {
+                            "id": "28",
+                            "name": {
+                                "value": "vinte e oito"
+                            }
+                        },
+                        {
+                            "id": "29",
+                            "name": {
+                                "value": "vinte e nove"
+                            }
+                        },
+                        {
+                            "id": "30",
+                            "name": {
+                                "value": "trinta"
+                            }
+                        },
+                        {
+                            "id": "31",
+                            "name": {
+                                "value": "trinta e um"
+                            }
+                        },
+                        {
+                            "id": "32",
+                            "name": {
+                                "value": "trinta e dois"
+                            }
+                        },
+                        {
+                            "id": "33",
+                            "name": {
+                                "value": "trinta e três"
+                            }
+                        },
+                        {
+                            "id": "34",
+                            "name": {
+                                "value": "trinta e quatro"
+                            }
+                        },
+                        {
+                            "id": "35",
+                            "name": {
+                                "value": "trinta e cinco"
+                            }
+                        },
+                        {
+                            "id": "36",
+                            "name": {
+                                "value": "trinta e seis"
+                            }
+                        },
+                        {
+                            "id": "37",
+                            "name": {
+                                "value": "trinta e sete"
+                            }
+                        },
+                        {
+                            "id": "38",
+                            "name": {
+                                "value": "trinta e oito"
+                            }
+                        },
+                        {
+                            "id": "39",
+                            "name": {
+                                "value": "trinta e nove"
+                            }
+                        },
+                        {
+                            "id": "40",
+                            "name": {
+                                "value": "quarenta"
+                            }
+                        },
+                        {
+                            "id": "41",
+                            "name": {
+                                "value": "quarenta e um"
+                            }
+                        },
+                        {
+                            "id": "42",
+                            "name": {
+                                "value": "quarenta e dois"
+                            }
+                        },
+                        {
+                            "id": "43",
+                            "name": {
+                                "value": "quarenta e três"
+                            }
+                        },
+                        {
+                            "id": "44",
+                            "name": {
+                                "value": "quarenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "45",
+                            "name": {
+                                "value": "quarenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "46",
+                            "name": {
+                                "value": "quarenta e seis"
+                            }
+                        },
+                        {
+                            "id": "47",
+                            "name": {
+                                "value": "quarenta e sete"
+                            }
+                        },
+                        {
+                            "id": "48",
+                            "name": {
+                                "value": "quarenta e oito"
+                            }
+                        },
+                        {
+                            "id": "49",
+                            "name": {
+                                "value": "quarenta e nove"
+                            }
+                        },
+                        {
+                            "id": "50",
+                            "name": {
+                                "value": "cinquenta"
+                            }
+                        },
+                        {
+                            "id": "51",
+                            "name": {
+                                "value": "cinquenta e um"
+                            }
+                        },
+                        {
+                            "id": "52",
+                            "name": {
+                                "value": "cinquenta e dois"
+                            }
+                        },
+                        {
+                            "id": "53",
+                            "name": {
+                                "value": "cinquenta e três"
+                            }
+                        },
+                        {
+                            "id": "54",
+                            "name": {
+                                "value": "cinquenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "55",
+                            "name": {
+                                "value": "cinquenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "56",
+                            "name": {
+                                "value": "cinquenta e seis"
+                            }
+                        },
+                        {
+                            "id": "57",
+                            "name": {
+                                "value": "cinquenta e sete"
+                            }
+                        },
+                        {
+                            "id": "58",
+                            "name": {
+                                "value": "cinquenta e oito"
+                            }
+                        },
+                        {
+                            "id": "59",
+                            "name": {
+                                "value": "cinquenta e nove"
+                            }
+                        },
+                        {
+                            "id": "60",
+                            "name": {
+                                "value": "sessenta"
+                            }
+                        },
+                        {
+                            "id": "61",
+                            "name": {
+                                "value": "sessenta e um"
+                            }
+                        },
+                        {
+                            "id": "62",
+                            "name": {
+                                "value": "sessenta e dois"
+                            }
+                        },
+                        {
+                            "id": "63",
+                            "name": {
+                                "value": "sessenta e três"
+                            }
+                        },
+                        {
+                            "id": "64",
+                            "name": {
+                                "value": "sessenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "65",
+                            "name": {
+                                "value": "sessenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "66",
+                            "name": {
+                                "value": "sessenta e seis"
+                            }
+                        },
+                        {
+                            "id": "67",
+                            "name": {
+                                "value": "sessenta e sete"
+                            }
+                        },
+                        {
+                            "id": "68",
+                            "name": {
+                                "value": "sessenta e oito"
+                            }
+                        },
+                        {
+                            "id": "69",
+                            "name": {
+                                "value": "sessenta e nove"
+                            }
+                        },
+                        {
+                            "id": "70",
+                            "name": {
+                                "value": "setenta"
+                            }
+                        },
+                        {
+                            "id": "71",
+                            "name": {
+                                "value": "setenta e um"
+                            }
+                        },
+                        {
+                            "id": "72",
+                            "name": {
+                                "value": "setenta e dois"
+                            }
+                        },
+                        {
+                            "id": "73",
+                            "name": {
+                                "value": "setenta e três"
+                            }
+                        },
+                        {
+                            "id": "74",
+                            "name": {
+                                "value": "setenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "75",
+                            "name": {
+                                "value": "setenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "76",
+                            "name": {
+                                "value": "setenta e seis"
+                            }
+                        },
+                        {
+                            "id": "77",
+                            "name": {
+                                "value": "setenta e sete"
+                            }
+                        },
+                        {
+                            "id": "78",
+                            "name": {
+                                "value": "setenta e oito"
+                            }
+                        },
+                        {
+                            "id": "79",
+                            "name": {
+                                "value": "setenta e nove"
+                            }
+                        },
+                        {
+                            "id": "80",
+                            "name": {
+                                "value": "oitenta"
+                            }
+                        },
+                        {
+                            "id": "81",
+                            "name": {
+                                "value": "oitenta e um"
+                            }
+                        },
+                        {
+                            "id": "82",
+                            "name": {
+                                "value": "oitenta e dois"
+                            }
+                        },
+                        {
+                            "id": "83",
+                            "name": {
+                                "value": "oitenta e três"
+                            }
+                        },
+                        {
+                            "id": "84",
+                            "name": {
+                                "value": "oitenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "85",
+                            "name": {
+                                "value": "oitenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "86",
+                            "name": {
+                                "value": "oitenta e seis"
+                            }
+                        },
+                        {
+                            "id": "87",
+                            "name": {
+                                "value": "oitenta e sete"
+                            }
+                        },
+                        {
+                            "id": "88",
+                            "name": {
+                                "value": "oitenta e oito"
+                            }
+                        },
+                        {
+                            "id": "89",
+                            "name": {
+                                "value": "oitenta e nove"
+                            }
+                        },
+                        {
+                            "id": "90",
+                            "name": {
+                                "value": "noventa"
+                            }
+                        },
+                        {
+                            "id": "91",
+                            "name": {
+                                "value": "noventa e um"
+                            }
+                        },
+                        {
+                            "id": "92",
+                            "name": {
+                                "value": "noventa e dois"
+                            }
+                        },
+                        {
+                            "id": "93",
+                            "name": {
+                                "value": "noventa e três"
+                            }
+                        },
+                        {
+                            "id": "94",
+                            "name": {
+                                "value": "noventa e quatro"
+                            }
+                        },
+                        {
+                            "id": "95",
+                            "name": {
+                                "value": "noventa e cinco"
+                            }
+                        },
+                        {
+                            "id": "96",
+                            "name": {
+                                "value": "noventa e seis"
+                            }
+                        },
+                        {
+                            "id": "97",
+                            "name": {
+                                "value": "noventa e sete"
+                            }
+                        },
+                        {
+                            "id": "98",
+                            "name": {
+                                "value": "noventa e oito"
+                            }
+                        },
+                        {
+                            "id": "99",
+                            "name": {
+                                "value": "noventa e nove"
+                            }
+                        },
+                        {
+                            "id": "100",
+                            "name": {
+                                "value": "cem"
+                            }
+                        },
+                        {
+                            "id": "101",
+                            "name": {
+                                "value": "cento e um"
+                            }
+                        },
+                        {
+                            "id": "102",
+                            "name": {
+                                "value": "cento e dois"
+                            }
+                        },
+                        {
+                            "id": "103",
+                            "name": {
+                                "value": "cento e três"
+                            }
+                        },
+                        {
+                            "id": "104",
+                            "name": {
+                                "value": "cento e quatro"
+                            }
+                        },
+                        {
+                            "id": "105",
+                            "name": {
+                                "value": "cento e cinco"
+                            }
+                        },
+                        {
+                            "id": "106",
+                            "name": {
+                                "value": "cento e seis"
+                            }
+                        },
+                        {
+                            "id": "107",
+                            "name": {
+                                "value": "cento e sete"
+                            }
+                        },
+                        {
+                            "id": "108",
+                            "name": {
+                                "value": "cento e oito"
+                            }
+                        },
+                        {
+                            "id": "109",
+                            "name": {
+                                "value": "cento e nove"
+                            }
+                        },
+                        {
+                            "id": "110",
+                            "name": {
+                                "value": "cento e dez"
+                            }
+                        },
+                        {
+                            "id": "111",
+                            "name": {
+                                "value": "cento e onze"
+                            }
+                        },
+                        {
+                            "id": "112",
+                            "name": {
+                                "value": "cento e doze"
+                            }
+                        },
+                        {
+                            "id": "113",
+                            "name": {
+                                "value": "cento e treze"
+                            }
+                        },
+                        {
+                            "id": "114",
+                            "name": {
+                                "value": "cento e catorze",
+                                "synonyms": [
+                                    "cento e quatorze"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "115",
+                            "name": {
+                                "value": "cento e quinze"
+                            }
+                        },
+                        {
+                            "id": "116",
+                            "name": {
+                                "value": "cento e dezesseis"
+                            }
+                        },
+                        {
+                            "id": "117",
+                            "name": {
+                                "value": "cento e dezessete"
+                            }
+                        },
+                        {
+                            "id": "118",
+                            "name": {
+                                "value": "cento e dezoito"
+                            }
+                        },
+                        {
+                            "id": "119",
+                            "name": {
+                                "value": "cento e dezenove"
+                            }
+                        },
+                        {
+                            "id": "120",
+                            "name": {
+                                "value": "cento e vinte"
+                            }
+                        },
+                        {
+                            "id": "121",
+                            "name": {
+                                "value": "cento e vinte e um"
+                            }
+                        },
+                        {
+                            "id": "122",
+                            "name": {
+                                "value": "cento e vinte e dois"
+                            }
+                        },
+                        {
+                            "id": "123",
+                            "name": {
+                                "value": "cento e vinte e três"
+                            }
+                        },
+                        {
+                            "id": "124",
+                            "name": {
+                                "value": "cento e vinte e quatro"
+                            }
+                        },
+                        {
+                            "id": "125",
+                            "name": {
+                                "value": "cento e vinte e cinco"
+                            }
+                        },
+                        {
+                            "id": "126",
+                            "name": {
+                                "value": "cento e vinte e seis"
+                            }
+                        },
+                        {
+                            "id": "127",
+                            "name": {
+                                "value": "cento e vinte e sete"
+                            }
+                        },
+                        {
+                            "id": "128",
+                            "name": {
+                                "value": "cento e vinte e oito"
+                            }
+                        },
+                        {
+                            "id": "129",
+                            "name": {
+                                "value": "cento e vinte e nove"
+                            }
+                        },
+                        {
+                            "id": "130",
+                            "name": {
+                                "value": "cento e trinta"
+                            }
+                        },
+                        {
+                            "id": "131",
+                            "name": {
+                                "value": "cento e trinta e um"
+                            }
+                        },
+                        {
+                            "id": "132",
+                            "name": {
+                                "value": "cento e trinta e dois"
+                            }
+                        },
+                        {
+                            "id": "133",
+                            "name": {
+                                "value": "cento e trinta e três"
+                            }
+                        },
+                        {
+                            "id": "134",
+                            "name": {
+                                "value": "cento e trinta e quatro"
+                            }
+                        },
+                        {
+                            "id": "135",
+                            "name": {
+                                "value": "cento e trinta e cinco"
+                            }
+                        },
+                        {
+                            "id": "136",
+                            "name": {
+                                "value": "cento e trinta e seis"
+                            }
+                        },
+                        {
+                            "id": "137",
+                            "name": {
+                                "value": "cento e trinta e sete"
+                            }
+                        },
+                        {
+                            "id": "138",
+                            "name": {
+                                "value": "cento e trinta e oito"
+                            }
+                        },
+                        {
+                            "id": "139",
+                            "name": {
+                                "value": "cento e trinta e nove"
+                            }
+                        },
+                        {
+                            "id": "140",
+                            "name": {
+                                "value": "cento e quarenta"
+                            }
+                        },
+                        {
+                            "id": "141",
+                            "name": {
+                                "value": "cento e quarenta e um"
+                            }
+                        },
+                        {
+                            "id": "142",
+                            "name": {
+                                "value": "cento e quarenta e dois"
+                            }
+                        },
+                        {
+                            "id": "143",
+                            "name": {
+                                "value": "cento e quarenta e três"
+                            }
+                        },
+                        {
+                            "id": "144",
+                            "name": {
+                                "value": "cento e quarenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "145",
+                            "name": {
+                                "value": "cento e quarenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "146",
+                            "name": {
+                                "value": "cento e quarenta e seis"
+                            }
+                        },
+                        {
+                            "id": "147",
+                            "name": {
+                                "value": "cento e quarenta e sete"
+                            }
+                        },
+                        {
+                            "id": "148",
+                            "name": {
+                                "value": "cento e quarenta e oito"
+                            }
+                        },
+                        {
+                            "id": "149",
+                            "name": {
+                                "value": "cento e quarenta e nove"
+                            }
+                        },
+                        {
+                            "id": "150",
+                            "name": {
+                                "value": "cento e cinquenta"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "versiculo",
+                    "values": [
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "um"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "dois"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "três"
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "quatro"
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "cinco"
+                            }
+                        },
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "seis"
+                            }
+                        },
+                        {
+                            "id": "7",
+                            "name": {
+                                "value": "sete"
+                            }
+                        },
+                        {
+                            "id": "8",
+                            "name": {
+                                "value": "oito"
+                            }
+                        },
+                        {
+                            "id": "9",
+                            "name": {
+                                "value": "nove"
+                            }
+                        },
+                        {
+                            "id": "10",
+                            "name": {
+                                "value": "dez"
+                            }
+                        },
+                        {
+                            "id": "11",
+                            "name": {
+                                "value": "onze"
+                            }
+                        },
+                        {
+                            "id": "12",
+                            "name": {
+                                "value": "doze"
+                            }
+                        },
+                        {
+                            "id": "13",
+                            "name": {
+                                "value": "treze"
+                            }
+                        },
+                        {
+                            "id": "14",
+                            "name": {
+                                "value": "catorze",
+                                "synonyms": [
+                                    "quatorze"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "15",
+                            "name": {
+                                "value": "quinze"
+                            }
+                        },
+                        {
+                            "id": "16",
+                            "name": {
+                                "value": "dezesseis"
+                            }
+                        },
+                        {
+                            "id": "17",
+                            "name": {
+                                "value": "dezessete"
+                            }
+                        },
+                        {
+                            "id": "18",
+                            "name": {
+                                "value": "dezoito"
+                            }
+                        },
+                        {
+                            "id": "19",
+                            "name": {
+                                "value": "dezenove"
+                            }
+                        },
+                        {
+                            "id": "20",
+                            "name": {
+                                "value": "vinte"
+                            }
+                        },
+                        {
+                            "id": "21",
+                            "name": {
+                                "value": "vinte e um"
+                            }
+                        },
+                        {
+                            "id": "22",
+                            "name": {
+                                "value": "vinte e dois"
+                            }
+                        },
+                        {
+                            "id": "23",
+                            "name": {
+                                "value": "vinte e três"
+                            }
+                        },
+                        {
+                            "id": "24",
+                            "name": {
+                                "value": "vinte e quatro"
+                            }
+                        },
+                        {
+                            "id": "25",
+                            "name": {
+                                "value": "vinte e cinco"
+                            }
+                        },
+                        {
+                            "id": "26",
+                            "name": {
+                                "value": "vinte e seis"
+                            }
+                        },
+                        {
+                            "id": "27",
+                            "name": {
+                                "value": "vinte e sete"
+                            }
+                        },
+                        {
+                            "id": "28",
+                            "name": {
+                                "value": "vinte e oito"
+                            }
+                        },
+                        {
+                            "id": "29",
+                            "name": {
+                                "value": "vinte e nove"
+                            }
+                        },
+                        {
+                            "id": "30",
+                            "name": {
+                                "value": "trinta"
+                            }
+                        },
+                        {
+                            "id": "31",
+                            "name": {
+                                "value": "trinta e um"
+                            }
+                        },
+                        {
+                            "id": "32",
+                            "name": {
+                                "value": "trinta e dois"
+                            }
+                        },
+                        {
+                            "id": "33",
+                            "name": {
+                                "value": "trinta e três"
+                            }
+                        },
+                        {
+                            "id": "34",
+                            "name": {
+                                "value": "trinta e quatro"
+                            }
+                        },
+                        {
+                            "id": "35",
+                            "name": {
+                                "value": "trinta e cinco"
+                            }
+                        },
+                        {
+                            "id": "36",
+                            "name": {
+                                "value": "trinta e seis"
+                            }
+                        },
+                        {
+                            "id": "37",
+                            "name": {
+                                "value": "trinta e sete"
+                            }
+                        },
+                        {
+                            "id": "38",
+                            "name": {
+                                "value": "trinta e oito"
+                            }
+                        },
+                        {
+                            "id": "39",
+                            "name": {
+                                "value": "trinta e nove"
+                            }
+                        },
+                        {
+                            "id": "40",
+                            "name": {
+                                "value": "quarenta"
+                            }
+                        },
+                        {
+                            "id": "41",
+                            "name": {
+                                "value": "quarenta e um"
+                            }
+                        },
+                        {
+                            "id": "42",
+                            "name": {
+                                "value": "quarenta e dois"
+                            }
+                        },
+                        {
+                            "id": "43",
+                            "name": {
+                                "value": "quarenta e três"
+                            }
+                        },
+                        {
+                            "id": "44",
+                            "name": {
+                                "value": "quarenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "45",
+                            "name": {
+                                "value": "quarenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "46",
+                            "name": {
+                                "value": "quarenta e seis"
+                            }
+                        },
+                        {
+                            "id": "47",
+                            "name": {
+                                "value": "quarenta e sete"
+                            }
+                        },
+                        {
+                            "id": "48",
+                            "name": {
+                                "value": "quarenta e oito"
+                            }
+                        },
+                        {
+                            "id": "49",
+                            "name": {
+                                "value": "quarenta e nove"
+                            }
+                        },
+                        {
+                            "id": "50",
+                            "name": {
+                                "value": "cinquenta"
+                            }
+                        },
+                        {
+                            "id": "51",
+                            "name": {
+                                "value": "cinquenta e um"
+                            }
+                        },
+                        {
+                            "id": "52",
+                            "name": {
+                                "value": "cinquenta e dois"
+                            }
+                        },
+                        {
+                            "id": "53",
+                            "name": {
+                                "value": "cinquenta e três"
+                            }
+                        },
+                        {
+                            "id": "54",
+                            "name": {
+                                "value": "cinquenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "55",
+                            "name": {
+                                "value": "cinquenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "56",
+                            "name": {
+                                "value": "cinquenta e seis"
+                            }
+                        },
+                        {
+                            "id": "57",
+                            "name": {
+                                "value": "cinquenta e sete"
+                            }
+                        },
+                        {
+                            "id": "58",
+                            "name": {
+                                "value": "cinquenta e oito"
+                            }
+                        },
+                        {
+                            "id": "59",
+                            "name": {
+                                "value": "cinquenta e nove"
+                            }
+                        },
+                        {
+                            "id": "60",
+                            "name": {
+                                "value": "sessenta"
+                            }
+                        },
+                        {
+                            "id": "61",
+                            "name": {
+                                "value": "sessenta e um"
+                            }
+                        },
+                        {
+                            "id": "62",
+                            "name": {
+                                "value": "sessenta e dois"
+                            }
+                        },
+                        {
+                            "id": "63",
+                            "name": {
+                                "value": "sessenta e três"
+                            }
+                        },
+                        {
+                            "id": "64",
+                            "name": {
+                                "value": "sessenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "65",
+                            "name": {
+                                "value": "sessenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "66",
+                            "name": {
+                                "value": "sessenta e seis"
+                            }
+                        },
+                        {
+                            "id": "67",
+                            "name": {
+                                "value": "sessenta e sete"
+                            }
+                        },
+                        {
+                            "id": "68",
+                            "name": {
+                                "value": "sessenta e oito"
+                            }
+                        },
+                        {
+                            "id": "69",
+                            "name": {
+                                "value": "sessenta e nove"
+                            }
+                        },
+                        {
+                            "id": "70",
+                            "name": {
+                                "value": "setenta"
+                            }
+                        },
+                        {
+                            "id": "71",
+                            "name": {
+                                "value": "setenta e um"
+                            }
+                        },
+                        {
+                            "id": "72",
+                            "name": {
+                                "value": "setenta e dois"
+                            }
+                        },
+                        {
+                            "id": "73",
+                            "name": {
+                                "value": "setenta e três"
+                            }
+                        },
+                        {
+                            "id": "74",
+                            "name": {
+                                "value": "setenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "75",
+                            "name": {
+                                "value": "setenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "76",
+                            "name": {
+                                "value": "setenta e seis"
+                            }
+                        },
+                        {
+                            "id": "77",
+                            "name": {
+                                "value": "setenta e sete"
+                            }
+                        },
+                        {
+                            "id": "78",
+                            "name": {
+                                "value": "setenta e oito"
+                            }
+                        },
+                        {
+                            "id": "79",
+                            "name": {
+                                "value": "setenta e nove"
+                            }
+                        },
+                        {
+                            "id": "80",
+                            "name": {
+                                "value": "oitenta"
+                            }
+                        },
+                        {
+                            "id": "81",
+                            "name": {
+                                "value": "oitenta e um"
+                            }
+                        },
+                        {
+                            "id": "82",
+                            "name": {
+                                "value": "oitenta e dois"
+                            }
+                        },
+                        {
+                            "id": "83",
+                            "name": {
+                                "value": "oitenta e três"
+                            }
+                        },
+                        {
+                            "id": "84",
+                            "name": {
+                                "value": "oitenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "85",
+                            "name": {
+                                "value": "oitenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "86",
+                            "name": {
+                                "value": "oitenta e seis"
+                            }
+                        },
+                        {
+                            "id": "87",
+                            "name": {
+                                "value": "oitenta e sete"
+                            }
+                        },
+                        {
+                            "id": "88",
+                            "name": {
+                                "value": "oitenta e oito"
+                            }
+                        },
+                        {
+                            "id": "89",
+                            "name": {
+                                "value": "oitenta e nove"
+                            }
+                        },
+                        {
+                            "id": "90",
+                            "name": {
+                                "value": "noventa"
+                            }
+                        },
+                        {
+                            "id": "91",
+                            "name": {
+                                "value": "noventa e um"
+                            }
+                        },
+                        {
+                            "id": "92",
+                            "name": {
+                                "value": "noventa e dois"
+                            }
+                        },
+                        {
+                            "id": "93",
+                            "name": {
+                                "value": "noventa e três"
+                            }
+                        },
+                        {
+                            "id": "94",
+                            "name": {
+                                "value": "noventa e quatro"
+                            }
+                        },
+                        {
+                            "id": "95",
+                            "name": {
+                                "value": "noventa e cinco"
+                            }
+                        },
+                        {
+                            "id": "96",
+                            "name": {
+                                "value": "noventa e seis"
+                            }
+                        },
+                        {
+                            "id": "97",
+                            "name": {
+                                "value": "noventa e sete"
+                            }
+                        },
+                        {
+                            "id": "98",
+                            "name": {
+                                "value": "noventa e oito"
+                            }
+                        },
+                        {
+                            "id": "99",
+                            "name": {
+                                "value": "noventa e nove"
+                            }
+                        },
+                        {
+                            "id": "100",
+                            "name": {
+                                "value": "cem"
+                            }
+                        },
+                        {
+                            "id": "101",
+                            "name": {
+                                "value": "cento e um"
+                            }
+                        },
+                        {
+                            "id": "102",
+                            "name": {
+                                "value": "cento e dois"
+                            }
+                        },
+                        {
+                            "id": "103",
+                            "name": {
+                                "value": "cento e três"
+                            }
+                        },
+                        {
+                            "id": "104",
+                            "name": {
+                                "value": "cento e quatro"
+                            }
+                        },
+                        {
+                            "id": "105",
+                            "name": {
+                                "value": "cento e cinco"
+                            }
+                        },
+                        {
+                            "id": "106",
+                            "name": {
+                                "value": "cento e seis"
+                            }
+                        },
+                        {
+                            "id": "107",
+                            "name": {
+                                "value": "cento e sete"
+                            }
+                        },
+                        {
+                            "id": "108",
+                            "name": {
+                                "value": "cento e oito"
+                            }
+                        },
+                        {
+                            "id": "109",
+                            "name": {
+                                "value": "cento e nove"
+                            }
+                        },
+                        {
+                            "id": "110",
+                            "name": {
+                                "value": "cento e dez"
+                            }
+                        },
+                        {
+                            "id": "111",
+                            "name": {
+                                "value": "cento e onze"
+                            }
+                        },
+                        {
+                            "id": "112",
+                            "name": {
+                                "value": "cento e doze"
+                            }
+                        },
+                        {
+                            "id": "113",
+                            "name": {
+                                "value": "cento e treze"
+                            }
+                        },
+                        {
+                            "id": "114",
+                            "name": {
+                                "value": "cento e catorze",
+                                "synonyms": [
+                                    "cento e quatorze"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "115",
+                            "name": {
+                                "value": "cento e quinze"
+                            }
+                        },
+                        {
+                            "id": "116",
+                            "name": {
+                                "value": "cento e dezesseis"
+                            }
+                        },
+                        {
+                            "id": "117",
+                            "name": {
+                                "value": "cento e dezessete"
+                            }
+                        },
+                        {
+                            "id": "118",
+                            "name": {
+                                "value": "cento e dezoito"
+                            }
+                        },
+                        {
+                            "id": "119",
+                            "name": {
+                                "value": "cento e dezenove"
+                            }
+                        },
+                        {
+                            "id": "120",
+                            "name": {
+                                "value": "cento e vinte"
+                            }
+                        },
+                        {
+                            "id": "121",
+                            "name": {
+                                "value": "cento e vinte e um"
+                            }
+                        },
+                        {
+                            "id": "122",
+                            "name": {
+                                "value": "cento e vinte e dois"
+                            }
+                        },
+                        {
+                            "id": "123",
+                            "name": {
+                                "value": "cento e vinte e três"
+                            }
+                        },
+                        {
+                            "id": "124",
+                            "name": {
+                                "value": "cento e vinte e quatro"
+                            }
+                        },
+                        {
+                            "id": "125",
+                            "name": {
+                                "value": "cento e vinte e cinco"
+                            }
+                        },
+                        {
+                            "id": "126",
+                            "name": {
+                                "value": "cento e vinte e seis"
+                            }
+                        },
+                        {
+                            "id": "127",
+                            "name": {
+                                "value": "cento e vinte e sete"
+                            }
+                        },
+                        {
+                            "id": "128",
+                            "name": {
+                                "value": "cento e vinte e oito"
+                            }
+                        },
+                        {
+                            "id": "129",
+                            "name": {
+                                "value": "cento e vinte e nove"
+                            }
+                        },
+                        {
+                            "id": "130",
+                            "name": {
+                                "value": "cento e trinta"
+                            }
+                        },
+                        {
+                            "id": "131",
+                            "name": {
+                                "value": "cento e trinta e um"
+                            }
+                        },
+                        {
+                            "id": "132",
+                            "name": {
+                                "value": "cento e trinta e dois"
+                            }
+                        },
+                        {
+                            "id": "133",
+                            "name": {
+                                "value": "cento e trinta e três"
+                            }
+                        },
+                        {
+                            "id": "134",
+                            "name": {
+                                "value": "cento e trinta e quatro"
+                            }
+                        },
+                        {
+                            "id": "135",
+                            "name": {
+                                "value": "cento e trinta e cinco"
+                            }
+                        },
+                        {
+                            "id": "136",
+                            "name": {
+                                "value": "cento e trinta e seis"
+                            }
+                        },
+                        {
+                            "id": "137",
+                            "name": {
+                                "value": "cento e trinta e sete"
+                            }
+                        },
+                        {
+                            "id": "138",
+                            "name": {
+                                "value": "cento e trinta e oito"
+                            }
+                        },
+                        {
+                            "id": "139",
+                            "name": {
+                                "value": "cento e trinta e nove"
+                            }
+                        },
+                        {
+                            "id": "140",
+                            "name": {
+                                "value": "cento e quarenta"
+                            }
+                        },
+                        {
+                            "id": "141",
+                            "name": {
+                                "value": "cento e quarenta e um"
+                            }
+                        },
+                        {
+                            "id": "142",
+                            "name": {
+                                "value": "cento e quarenta e dois"
+                            }
+                        },
+                        {
+                            "id": "143",
+                            "name": {
+                                "value": "cento e quarenta e três"
+                            }
+                        },
+                        {
+                            "id": "144",
+                            "name": {
+                                "value": "cento e quarenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "145",
+                            "name": {
+                                "value": "cento e quarenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "146",
+                            "name": {
+                                "value": "cento e quarenta e seis"
+                            }
+                        },
+                        {
+                            "id": "147",
+                            "name": {
+                                "value": "cento e quarenta e sete"
+                            }
+                        },
+                        {
+                            "id": "148",
+                            "name": {
+                                "value": "cento e quarenta e oito"
+                            }
+                        },
+                        {
+                            "id": "149",
+                            "name": {
+                                "value": "cento e quarenta e nove"
+                            }
+                        },
+                        {
+                            "id": "150",
+                            "name": {
+                                "value": "cento e cinquenta"
+                            }
+                        },
+                        {
+                            "id": "151",
+                            "name": {
+                                "value": "cento e cinquenta e um"
+                            }
+                        },
+                        {
+                            "id": "152",
+                            "name": {
+                                "value": "cento e cinquenta e dois"
+                            }
+                        },
+                        {
+                            "id": "153",
+                            "name": {
+                                "value": "cento e cinquenta e três"
+                            }
+                        },
+                        {
+                            "id": "154",
+                            "name": {
+                                "value": "cento e cinquenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "155",
+                            "name": {
+                                "value": "cento e cinquenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "156",
+                            "name": {
+                                "value": "cento e cinquenta e seis"
+                            }
+                        },
+                        {
+                            "id": "157",
+                            "name": {
+                                "value": "cento e cinquenta e sete"
+                            }
+                        },
+                        {
+                            "id": "158",
+                            "name": {
+                                "value": "cento e cinquenta e oito"
+                            }
+                        },
+                        {
+                            "id": "159",
+                            "name": {
+                                "value": "cento e cinquenta e nove"
+                            }
+                        },
+                        {
+                            "id": "160",
+                            "name": {
+                                "value": "cento e sessenta"
+                            }
+                        },
+                        {
+                            "id": "161",
+                            "name": {
+                                "value": "cento e sessenta e um"
+                            }
+                        },
+                        {
+                            "id": "162",
+                            "name": {
+                                "value": "cento e sessenta e dois"
+                            }
+                        },
+                        {
+                            "id": "163",
+                            "name": {
+                                "value": "cento e sessenta e três"
+                            }
+                        },
+                        {
+                            "id": "164",
+                            "name": {
+                                "value": "cento e sessenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "165",
+                            "name": {
+                                "value": "cento e sessenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "166",
+                            "name": {
+                                "value": "cento e sessenta e seis"
+                            }
+                        },
+                        {
+                            "id": "167",
+                            "name": {
+                                "value": "cento e sessenta e sete"
+                            }
+                        },
+                        {
+                            "id": "168",
+                            "name": {
+                                "value": "cento e sessenta e oito"
+                            }
+                        },
+                        {
+                            "id": "169",
+                            "name": {
+                                "value": "cento e sessenta e nove"
+                            }
+                        },
+                        {
+                            "id": "170",
+                            "name": {
+                                "value": "cento e setenta"
+                            }
+                        },
+                        {
+                            "id": "171",
+                            "name": {
+                                "value": "cento e setenta e um"
+                            }
+                        },
+                        {
+                            "id": "172",
+                            "name": {
+                                "value": "cento e setenta e dois"
+                            }
+                        },
+                        {
+                            "id": "173",
+                            "name": {
+                                "value": "cento e setenta e três"
+                            }
+                        },
+                        {
+                            "id": "174",
+                            "name": {
+                                "value": "cento e setenta e quatro"
+                            }
+                        },
+                        {
+                            "id": "175",
+                            "name": {
+                                "value": "cento e setenta e cinco"
+                            }
+                        },
+                        {
+                            "id": "176",
+                            "name": {
+                                "value": "cento e setenta e seis"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "LeiaBibliaIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "livro",
+                            "type": "livro",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.231675714880.1530595283510"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.861697849183.287534909219.682675137717"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "capitulo",
+                            "type": "capitulo",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.231675714880.449821397319"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.861697849183.588358063150.129293025081"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "versiculo",
+                            "type": "versiculo",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.861697849183.1023182900113.662244955500"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Slot.Validation.861697849183.287534909219.682675137717",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Não encontrei o livro ou capítulo ou o versículo solicitado. Por favor, pode dizer novamente?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.861697849183.588358063150.129293025081",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Não encontrei o livro ou capítulo ou o versículo solicitado. Por favor, pode dizer novamente?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.861697849183.1023182900113.662244955500",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Não encontrei o livro ou capítulo ou o versículo solicitado. Por favor, pode dizer novamente?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.231675714880.1530595283510",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Qual livro que você deseja que eu leia?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.231675714880.449821397319",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Qual capítulo de {livro} que você deseja que eu leia?"
+                    }
+                ]
+            }
+        ]
+    }
+}

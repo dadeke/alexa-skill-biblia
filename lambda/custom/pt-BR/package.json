@@ -1,0 +1,16 @@
+{
+  "name": "abre-a-biblia-para-mim",
+  "version": "1.0.1",
+  "description": "A skill que lê a Bíblia para você.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DD Tecnologia",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-core": "^2.0.7",
+    "ask-sdk-model": "^1.4.1",
+    "aws-sdk": "^2.453.0"
+  }
+}
