@@ -3,7 +3,7 @@ const Alexa = require('ask-sdk-core');
 const MyUtil = require('util.js');
 
 const messages = {
-    NOME_SKILL: 'Leia a Bíblia',
+    NOME_SKILL: 'Abre a Bíblia para Mim',
     BEM_VINDO: 'Diga para mim por exemplo: "Leia João capítulo três", ou, "Quero ajuda". O quê gostaria que eu lesse?',
     NAO_ENCONTREI: 'Não encontrei o livro ou capítulo ou o versículo solicitado. Por favor, pode dizer novamente?',
     DIGA_NOVAMENTE: 'Por favor, pode dizer novamente?',
