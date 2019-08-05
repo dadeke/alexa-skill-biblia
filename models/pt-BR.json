@@ -6,6 +6,7 @@
                 {
                     "name": "AMAZON.CancelIntent",
                     "samples": [
+                        "cancelar leitura",
                         "pare a leitura",
                         "cancele",
                         "cancelar",
