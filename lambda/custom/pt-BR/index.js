@@ -62,11 +62,13 @@ const LeiaBibliaIntentHandler = {
                     return handlerInput.responseBuilder
                         .speak(speechText)
                         .withSimpleCard(messages.NOME_SKILL, speechText)
+                        .withShouldEndSession(true)
                         .getResponse();
                 }
                 else {
                     return handlerInput.responseBuilder
                         .speak(speechText)
+                        .withShouldEndSession(true)
                         .getResponse();
                 }
             }
