@@ -5,12 +5,12 @@ const MyUtil = require('util.js');
 const messages = {
     NOME_SKILL: 'Abre a Bíblia para Mim',
     BEM_VINDO: 'Diga para mim por exemplo: "Leia João capítulo três", ou, "Quero ajuda". O quê gostaria que eu lesse?',
-    NAO_ENCONTREI: 'Não encontrei o livro ou capítulo ou o versículo solicitado. Por favor, pode dizer novamente?',
+    NAO_ENCONTREI: 'Não encontrei o livro ou o capítulo ou o versículo solicitado. Por favor, pode dizer novamente?',
     DIGA_NOVAMENTE: 'Por favor, pode dizer novamente?',
-    TEXTO_AJUDA: 'Eu sou capaz de ler a Bíblia. Por exemplo: "Leia a Bíblia no evangelho de João capítulo três", ou, "Leia Salmo vinte e três versículo um". O quê gostaria que eu lesse?',
+    TEXTO_AJUDA: 'Eu sou capaz de ler a Bíblia. Diga para mim por exemplo: "Leia a Bíblia no evangelho de João capítulo três", ou, "Leia Salmo capítulo vinte e três versículo um". O quê gostaria que eu lesse?',
     LER_O_QUE: 'O quê gostaria que eu lesse?',
     TUDO_BEM: 'Tudo bem.',
-    NAO_ENTENDI: 'Desculpe, não consegui entender o que disse. Por favor, diga novamente.'
+    NAO_ENTENDI: 'Desculpe, não consegui entender. Por favor, diga novamente.'
 }
 
 const LaunchRequestHandler = {
