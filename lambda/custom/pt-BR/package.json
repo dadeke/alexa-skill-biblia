@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "DD Tecnologia",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "ask-sdk-core": "^2.0.7",
     "ask-sdk-model": "^1.4.1",
