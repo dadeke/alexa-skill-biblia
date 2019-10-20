@@ -1,17 +1,37 @@
 const Alexa = require('ask-sdk-core');
+const persistenceAdapter = require('ask-sdk-s3-persistence-adapter');
 // const Util = require('util');
 const MyUtil = require('util.js');
 
 const messages = {
 	NOME_SKILL: 'Abre a Bíblia para Mim',
-	BEM_VINDO: 'Diga para mim por exemplo: "Leia João capítulo três", ou, "Quero ajuda". O quê gostaria que eu lesse?',
+	BEM_VINDO: 'Diga para mim por exemplo: "Leia João capítulo três", ou, "Quero ajuda". ',
+	BEM_VINDO_VOLTA: 'Bem-vindo de volta! ',
 	NAO_ENCONTREI: 'Não encontrei o livro ou o capítulo ou o versículo solicitado. Por favor, pode dizer novamente?',
 	DIGA_NOVAMENTE: 'Por favor, pode dizer novamente?',
-	TEXTO_AJUDA: 'Eu sou capaz de ler a Bíblia. Diga para mim por exemplo: "Leia a Bíblia no evangelho de João capítulo três", ou, "Leia Salmo capítulo vinte e três versículo um". O quê gostaria que eu lesse?',
+	TEXTO_AJUDA: 'Eu sou capaz de ler a Bíblia. Diga para mim por exemplo: "Leia João capítulo três", ou, "Alexa, abre a Bíblia para mim João três versículo dezesseis". ',
 	LER_O_QUE: 'O quê gostaria que eu lesse?',
 	TUDO_BEM: 'Tudo bem.',
-	NAO_ENTENDI: 'Desculpe, não consegui entender. Por favor, diga novamente.'
-}
+	NAO_ENTENDI: 'Desculpe, não consegui entender. Por favor, fale novamente.'
+};
+
+const FirstLaunchRequestHandler = {
+	canHandle(handlerInput) {
+			const attributesManager = handlerInput.attributesManager;
+			const sessionAttributes = attributesManager.getSessionAttributes() || {};
+
+			const ja_usou = sessionAttributes.hasOwnProperty('ja_usou') ? sessionAttributes.ja_usou : false;
+
+			return handlerInput.requestEnvelope.request.type === 'LaunchRequest' && !ja_usou;
+	},
+	async handle(handlerInput) {
+		return handlerInput.responseBuilder
+			.speak(messages.BEM_VINDO + messages.LER_O_QUE)
+			.reprompt(messages.LER_O_QUE)
+			.withSimpleCard(messages.NOME_SKILL, messages.BEM_VINDO + messages.LER_O_QUE)
+			.getResponse();
+	}
+};
 
 const LaunchRequestHandler = {
 	canHandle(handlerInput) {
@@ -19,9 +39,9 @@ const LaunchRequestHandler = {
 	},
 	handle(handlerInput) {
 		return handlerInput.responseBuilder
-			.speak(messages.BEM_VINDO)
+			.speak(messages.BEM_VINDO_VOLTA + messages.LER_O_QUE)
 			.reprompt(messages.LER_O_QUE)
-			.withSimpleCard(messages.NOME_SKILL, messages.BEM_VINDO)
+			.withSimpleCard(messages.NOME_SKILL, messages.BEM_VINDO_VOLTA + messages.LER_O_QUE)
 			.getResponse();
 	},
 };
@@ -55,6 +75,15 @@ const LeiaBibliaIntentHandler = {
 
 				if(s3Object !== null) {
 					// console.log(Util.inspect(s3Object));
+					const attributesManager = handlerInput.attributesManager;
+					const sessionAttributes = attributesManager.getSessionAttributes() || {};
+
+					const ja_usou = sessionAttributes.hasOwnProperty('ja_usou') ? sessionAttributes.ja_usou : false;
+
+					if(!ja_usou) {
+						attributesManager.setPersistentAttributes({ 'ja_usou': true });
+						await attributesManager.savePersistentAttributes();
+					}
 
 					const speechText = s3Object.Body.toString('utf-8');
 
@@ -109,9 +138,9 @@ const HelpIntentHandler = {
 	},
 	handle(handlerInput) {
 		return handlerInput.responseBuilder
-			.speak(messages.TEXTO_AJUDA)
+			.speak(messages.TEXTO_AJUDA + messages.LER_O_QUE)
 			.reprompt(messages.LER_O_QUE)
-			.withSimpleCard(messages.NOME_SKILL, messages.TEXTO_AJUDA)
+			.withSimpleCard(messages.NOME_SKILL, messages.TEXTO_AJUDA + messages.LER_O_QUE)
 			.getResponse();
 	},
 };
@@ -155,14 +184,30 @@ const ErrorHandler = {
 	},
 };
 
-const skillBuilder = Alexa.SkillBuilders.custom();
+const LoadInterceptor = {
+	async process(handlerInput) {
+		const attributesManager = handlerInput.attributesManager;
+		const sessionAttributes = await attributesManager.getPersistentAttributes() || {};
 
-exports.handler = skillBuilder
+		const ja_usou = sessionAttributes.hasOwnProperty('ja_usou') ? sessionAttributes.ja_usou : false;
+
+		if(ja_usou) {
+				attributesManager.setSessionAttributes(sessionAttributes);
+		}
+	}
+};
+
+exports.handler = Alexa.SkillBuilders.custom()
+	.withPersistenceAdapter(
+		new persistenceAdapter.S3PersistenceAdapter({bucketName:process.env.S3_PERSISTENCE_BUCKET})
+	)
 	.addRequestHandlers(
+		FirstLaunchRequestHandler,
 		LaunchRequestHandler,
 		LeiaBibliaIntentHandler,
 		HelpIntentHandler,
 		CancelAndStopIntentHandler,
 		SessionEndedRequestHandler)
 	.addErrorHandlers(ErrorHandler)
+	.addRequestInterceptors(LoadInterceptor)
 	.lambda();
