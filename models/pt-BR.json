@@ -2658,13 +2658,7 @@
                             "elicitationRequired": true,
                             "prompts": {
                                 "elicitation": "Elicit.Slot.231675714880.1530595283510"
-                            },
-                            "validations": [
-                                {
-                                    "type": "hasEntityResolutionMatch",
-                                    "prompt": "Slot.Validation.861697849183.287534909219.682675137717"
-                                }
-                            ]
+                            }
                         },
                         {
                             "name": "capitulo",
@@ -2673,26 +2667,14 @@
                             "elicitationRequired": true,
                             "prompts": {
                                 "elicitation": "Elicit.Slot.231675714880.449821397319"
-                            },
-                            "validations": [
-                                {
-                                    "type": "hasEntityResolutionMatch",
-                                    "prompt": "Slot.Validation.861697849183.588358063150.129293025081"
-                                }
-                            ]
+                            }
                         },
                         {
                             "name": "versiculo",
                             "type": "versiculo",
                             "confirmationRequired": false,
                             "elicitationRequired": false,
-                            "prompts": {},
-                            "validations": [
-                                {
-                                    "type": "hasEntityResolutionMatch",
-                                    "prompt": "Slot.Validation.861697849183.1023182900113.662244955500"
-                                }
-                            ]
+                            "prompts": {}
                         }
                     ]
                 }
@@ -2700,33 +2682,6 @@
             "delegationStrategy": "ALWAYS"
         },
         "prompts": [
-            {
-                "id": "Slot.Validation.861697849183.287534909219.682675137717",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Não encontrei o livro ou capítulo ou o versículo solicitado. Por favor, pode dizer novamente?"
-                    }
-                ]
-            },
-            {
-                "id": "Slot.Validation.861697849183.588358063150.129293025081",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Não encontrei o livro ou capítulo ou o versículo solicitado. Por favor, pode dizer novamente?"
-                    }
-                ]
-            },
-            {
-                "id": "Slot.Validation.861697849183.1023182900113.662244955500",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Não encontrei o livro ou capítulo ou o versículo solicitado. Por favor, pode dizer novamente?"
-                    }
-                ]
-            },
             {
                 "id": "Elicit.Slot.231675714880.1530595283510",
                 "variations": [
