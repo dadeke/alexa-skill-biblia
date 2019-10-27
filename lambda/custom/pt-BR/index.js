@@ -1,6 +1,7 @@
 const Alexa = require('ask-sdk-core');
 const persistenceAdapter = require('ask-sdk-s3-persistence-adapter');
 // const Util = require('util');
+
 const MyUtil = require('util.js');
 
 const messages = {
@@ -12,8 +13,21 @@ const messages = {
 	TEXTO_AJUDA: 'Eu sou capaz de ler a Bíblia. Diga para mim por exemplo: "Leia João capítulo três", ou, "Alexa, abre a Bíblia para mim João três versículo dezesseis". ',
 	LER_O_QUE: 'O quê gostaria que eu lesse?',
 	TUDO_BEM: 'Tudo bem.',
-	NAO_ENTENDI: 'Desculpe, não consegui entender. Por favor, fale novamente.'
+	NAO_ENTENDI: 'Desculpe, não consegui entender. Por favor, fale novamente.',
+	TEXTO_GRANDE: 'Infelizmente ainda não sou capaz de ler o livro de {0} capítulo {1} completamente, porque o texto desse capítulo é muito grande para mim. ',
+	TEXTO_GRANDE_PEDIDO: 'Por favor, peça-me para ler um versículo específico falando assim: "{0}, capítulo {1} versículo cinco". ',
 };
+
+/*
+ * Formata string.
+ * Equivalente ao "printf()" C/PHP ou ao "String.Format()" para programadores C#/Java.
+ */
+String.prototype.format = function() {
+	var args = arguments;
+	return this.replace(/\{(\d+)\}/g, function(text, key) {
+		return args[key];
+	});
+}
 
 const FirstLaunchRequestHandler = {
 	canHandle(handlerInput) {
@@ -86,6 +100,18 @@ const LeiaBibliaIntentHandler = {
 					}
 
 					const speechText = s3Object.Body.toString('utf-8');
+
+					// O serviço da Alexa não é capaz de ler textos com mais de 8000 caracteres.
+					if(speechText.length > 8000) {
+						const nome_livro = handlerInput.requestEnvelope.request.intent.slots.livro.resolutions.resolutionsPerAuthority[0].values[0].value.name;
+
+						return handlerInput.responseBuilder
+							.speak(messages.TEXTO_GRANDE.format(nome_livro, capitulo)
+									+ messages.TEXTO_GRANDE_PEDIDO.format(nome_livro, capitulo)
+									+ messages.LER_O_QUE)
+							.reprompt(messages.DIGA_NOVAMENTE)
+							.getResponse();
+					}
 
 					if(versiculo !== null) {
 						return handlerInput.responseBuilder
