@@ -1,6 +1,6 @@
 const Alexa = require('ask-sdk-core');
 const persistenceAdapter = require('ask-sdk-s3-persistence-adapter');
-// const Util = require('util');
+const Util = require('util');
 
 const MyUtil = require('util.js');
 
@@ -190,7 +190,7 @@ const SessionEndedRequestHandler = {
 		return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
 	},
 	handle(handlerInput) {
-		console.log(`Sessão encerrada com essa reação: ${handlerInput.requestEnvelope.request.reason}`);
+		console.log(`Sessão encerrada com essa reação: ${Util.inspect(handlerInput.requestEnvelope.request)}`);
 
 		return handlerInput.responseBuilder.getResponse();
 	},
