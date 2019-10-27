@@ -1,6 +1,6 @@
 {
   "name": "abre-a-biblia-para-mim",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A skill que lê a Bíblia para você.",
   "main": "index.js",
   "scripts": {
