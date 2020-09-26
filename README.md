@@ -1,6 +1,6 @@
 # Skill da Alexa: Abre a Bíblia para Mim
 
-Esse é o repositório do código fonte da skill da Alexa: Abre a Bíblia para Mim.
+Repositório do código fonte da skill da Alexa: Abre a Bíblia para Mim.
 
 Esta skill é capaz de ler a Bíblia para deficientes visuais ou pessoas comuns. Ela possui a habilidade de ler um versículo específico ou um capítulo inteiro.
 
@@ -18,8 +18,6 @@ Futuramente essas questões poderão ser reavaliadas.
 
 Atualmente a versão da Bíblia que ela pode ler é a Nova Versão Internacional® - Português do Brasil
 Implementações de outras versões poderão ser avaliadas no futuro.
-
-Você pode contribuir para o código fonte dessa skill no [GitHub](https://github.com/dadeke/alexa-skill-biblia).
 
 Esta skill foi construída voluntariamente. Seu uso é gratuito.
 
